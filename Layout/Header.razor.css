@@ -108,26 +108,6 @@
 }
 
 /* ── CTA button — engineered shadow stack + active scale (no lift; anti-Codevibe) ── */
-.cta-button {
-    position: relative;
-    transition: background-color 0.2s ease,
-                box-shadow 0.25s ease,
-                transform 0.12s ease;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.32) inset, /* top highlight — depth */
-                0 1px 3px rgba(251, 146, 60, 0.22),
-                0 4px 14px -6px rgba(251, 146, 60, 0.28);
-}
-
-.cta-button:hover {
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset,
-                0 2px 6px rgba(251, 146, 60, 0.3),
-                0 8px 22px -6px rgba(251, 146, 60, 0.42);
-}
-
-.cta-button:active {
-    transform: scale(0.97); /* touch feedback only on active, never hover */
-}
-
 /* ── Premium tinted header surface w/ scroll-shrink (2026) ── */
 /* Pearl wash (cool-tinted near-white) with brand temperature.
    No top decorative strip, no backdrop-blur, neutral warm-tinted hairline. */

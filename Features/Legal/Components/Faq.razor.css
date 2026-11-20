@@ -224,19 +224,19 @@
 }
 
 .faq-cta-button--primary {
-    background: #fb923c; /* orange-400 — brand primary */
+    background: #F0642A; /* orange-400 — brand primary */
     color: #0F1E1F;      /* teal-cyan-aqua-900 — high contrast on orange */
-    box-shadow: 0 8px 20px -10px rgba(251, 146, 60, 0.45);
+    box-shadow: 0 8px 20px -10px rgba(240, 100, 42, 0.45);
 }
 
 .faq-cta-button--primary:hover {
-    background: #f97316; /* orange-500 */
-    box-shadow: 0 12px 28px -10px rgba(249, 115, 22, 0.55);
+    background: #F0642A; /* orange-500 */
+    box-shadow: 0 12px 28px -10px rgba(240, 100, 42, 0.55);
 }
 
 .faq-cta-button--primary:active {
     transform: scale(0.97);
-    box-shadow: 0 4px 12px -8px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 4px 12px -8px rgba(240, 100, 42, 0.4);
 }
 
 .faq-cta-button--primary:focus-visible {

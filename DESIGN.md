@@ -5,8 +5,8 @@ colors:
   teal-brand: "#61C2C8"
   teal-hover: "#74b7bb"
   teal-light: "#76cbd2"
-  cta-orange: "#f97316"
-  cta-orange-hover: "#ea6c0a"
+  cta-orange: "#F0642A"
+  cta-orange-hover: "#E25A1F"
   teal-50: "#DAF6F9"
   teal-100: "#B8EFF4"
   teal-200: "#89D6DC"
@@ -83,10 +83,10 @@ spacing:
 components:
   button-primary:
     backgroundColor: "{colors.cta-orange}"
-    textColor: "{colors.ink-primary}"
+    textColor: "{colors.teal-900}"
     rounded: "{rounded.full}"
     padding: "12px 28px"
-    note: "Dark teal ink (#0F1E1F) on orange-400 — 8.1:1 contrast, WCAG AA pass"
+    note: "Deep teal ink (#0F1E1F) on Ember orange (#F0642A) — about 5.3:1, WCAG AA pass"
   button-primary-hover:
     backgroundColor: "{colors.cta-orange-hover}"
   button-secondary:
@@ -116,11 +116,11 @@ components:
 
 **Creative North Star: "The Working Prototype"**
 
-CloudZen's design system communicates capability through craft. Every surface, transition, and typographic decision is evidence of technical judgment — the kind a client or collaborator evaluates before they read a single word of copy. The system is built, not polished: it shows process (animated workflow nodes, connector paths, staged reveals) rather than announcing results. Motion is structural, not decorative. Spacing is deliberate, not generous by default.
+CloudZen's design system communicates capability through craft. Every surface, transition, and typographic decision is evidence of technical judgment — the kind a client or collaborator evaluates before they read a single word of copy. The system is built, not polished: it shows process (a workflow illustration, staged reveals) rather than announcing results. Motion is structural, not decorative. Spacing is deliberate, not generous by default.
 
-The palette is a tonal progression from near-black deep teal to crisp white, anchored by a warm cyan brand accent (`#61C2C8`) and a single high-energy orange for primary calls to action (`#f97316`). These two chromatic notes — cool technical teal and energetic warm orange — create a controlled tension that reads as competent and approachable at the same time.
+The palette is a tonal progression from near-black deep teal to crisp white, anchored by a warm cyan brand accent (`#61C2C8`) and a single high-energy orange for primary calls to action (`#F0642A`). These two chromatic notes — cool technical teal and energetic warm orange — create a controlled tension that reads as competent and approachable at the same time.
 
-This system explicitly rejects: stock-heavy corporate CV layouts, aggressive salesy CTAs, dated gradient overlays, the "black box" agency feel of opaque process descriptions, and disconnected section-to-section transitions that make a page feel assembled rather than designed. Warm cream backgrounds (`#fcf9f5` and equivalents) are permitted for specific variant experiments only — the default surface is white or the lightest step of the teal scale, never a warm-neutral tint.
+This system explicitly rejects: stock-heavy corporate CV layouts, aggressive salesy CTAs, dated gradient overlays, the "black box" agency feel of opaque process descriptions, and disconnected section-to-section transitions that make a page feel assembled rather than designed. No warm cream backgrounds (`#fcf9f5` and equivalents) anywhere, including the hero (now white) — the surface is white or the lightest step of the teal scale, never a warm-neutral tint.
 
 **Key Characteristics:**
 - Tonal depth via color ramp steps, not pervasive box-shadows
@@ -142,8 +142,8 @@ A cool, precise ramp from near-black teal through crisp white, accented by a sin
 - **Heading Teal** (`#1F3638` / `teal-800`): Card titles, section headings that live on tinted surfaces.
 
 ### Secondary
-- **Action Orange** (`#f97316`): All primary CTA buttons. Only warm color on light surfaces. Used nowhere else (no headings, no borders, no backgrounds except intentional highlight spots). **CTA button text must use deep teal ink (`#0F1E1F` / `text-teal-cyan-aqua-900`) — not white — to pass WCAG AA (8.1:1 on orange-400).**
-- **Orange Hover** (`#ea6c0a`): Pressed/hover state for Action Orange.
+- **Ember Orange** (`#F0642A`): All primary CTA buttons. Only warm color on light surfaces. Used nowhere else (no headings, no borders, no backgrounds except intentional highlight spots). **CTA button text must use deep teal ink (`#0F1E1F` / `text-teal-cyan-aqua-900`) — not white — to pass WCAG AA (about 5.3:1 on #F0642A; 4.6:1 on hover #E25A1F).**
+- **Ember Hover** (`#E25A1F`): Pressed/hover state for Action Orange.
 
 ### Tertiary
 - **Teal Mist** (`#DAF6F9` / `teal-50`): Icon backgrounds, badge fills, section tints. Always paired with a teal-600 or teal-700 element.
@@ -200,12 +200,11 @@ CloudZen uses **tonal elevation** as the primary depth system: surfaces are diff
 ### Shadow Vocabulary
 
 - **Rest (none)**: Default card state on white surface. `border: 1px solid #e5e7eb` provides the boundary. No box-shadow.
-- **Ambient-low** (`0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04)`): Workflow node cards at rest. Subtle lift for small floating elements.
+- **Ambient-low** (`0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04)`): Small floating elements (chat greeting bubble, compact badges).
 - **Ambient-mid** (`0 4px 16px rgba(0,0,0,0.10)`): Modals, dropdowns, badges that float over content.
-- **Hover-lift** (`0 8px 24px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06)`): Cards on hover. Applied via `transition-shadow duration-300`.
-- **Accent-glow-teal** (`0 0 20px rgba(97,194,200,0.45), 0 0 40px rgba(97,194,200,0.2)`): Animated pulse on interactive workflow nodes. Not used for static elevation.
-- **Accent-glow-orange** (`0 0 20px rgba(249,115,22,0.45), 0 0 40px rgba(249,115,22,0.2)`): Animated pulse on highlighted nodes.
-- **CTA-button** (`0 4px 12px rgba(249,115,22,0.3)`): CTA button hover shadow.
+- **Hover-soft** (`0 10px 30px -15px rgba(64,103,107,0.22)`): Cards on hover (ServiceCard, Core Solutions, CaseStudies, ProjectCard). Teal-tinted, negative spread, no vertical movement. Applied via `transition-[border-color,box-shadow] duration-300`.
+- **No glows.** Zero-offset colored glow shadows (teal or orange) are retired; do not add them. Highlight state with a border or flat tint instead.
+- **CTA-button** (`0 1px 2px rgba(15,30,31,.14), 0 2px 6px -2px rgba(15,30,31,.18)`): Flat, offset, ink-tinted shadow on the CTA. No colored glow, no hover growth.
 
 ### Named Rules
 **The Flat-by-Default Rule.** Cards and containers have no box-shadow at rest — only a `1px border-gray-100` boundary and a background tint distinguishing them from the page surface. Shadows activate exclusively on hover, focus, or explicit "elevated" state.
@@ -219,8 +218,8 @@ CloudZen uses **tonal elevation** as the primary depth system: surfaces are diff
 Technical and warm: rounded-full silhouette (approachable), precise internal padding (deliberate), immediate hover feedback (responsive).
 
 - **Shape:** `border-radius: 9999px` (`rounded-full`)
-- **Primary (Action Orange):** `background: #f97316; color: #fff; padding: 0.75rem 1.75rem; font: 600 0.875rem IBM Plex Sans; letter-spacing: 0.01em`
-- **Primary Hover/Focus:** `background: #ea6c0a; transform: translateY(-2px) scale(1.02); box-shadow: 0 4px 12px rgba(249,115,22,0.3); transition: all 0.2s ease`
+- **Primary (Ember Orange, `.btn-cta`):** `background: #F0642A; color: #0F1E1F; padding: 0.75rem 1.75rem; font: 600 0.875rem IBM Plex Sans; letter-spacing: 0.01em`. Single source of truth for every CTA; no gradient, no shimmer sheen.
+- **Primary Hover/Active/Focus:** hover `background: #E25A1F`; active `translateY(1px)`; focus-visible `outline: 2px solid #0F1E1F; outline-offset: 3px`. Transitions 0.12–0.18s ease-out on color, shadow and transform only.
 - **Secondary (Ghost):** `background: #fff; color: #374151; border: 2px solid #e5e7eb; padding: 0.625rem 1.5rem`
 - **Secondary Hover:** `background: #DAF6F9; color: #40676B; border-color: #78BCC2`
 - **Text Link:** `color: #40676B; text-decoration: underline 1px currentColor; underline-offset: 3px`
@@ -228,12 +227,12 @@ Technical and warm: rounded-full silhouette (approachable), precise internal pad
 
 ### Cards / Containers
 
-- **Corner Style:** `border-radius: 1rem` (`rounded-2xl` = 16px) for standard cards; `rounded-xl` (12px) for compact workflow nodes
+- **Corner Style:** `border-radius: 1rem` (`rounded-2xl` = 16px) for standard cards; `rounded-xl` (12px) for compact cards and icon tiles
 - **Background:** `#ffffff` on gray-50/100 page surface; `teal-50` for tinted feature cards
 - **Border:** `1px solid #e5e7eb` at rest; `border-color: #89D6DC` on hover
-- **Shadow Strategy:** None at rest (flat-by-default); `hover-lift` shadow on interactive hover
-- **Internal Padding:** `1.5rem` standard; `0.875rem 1.25rem` for compact node cards
-- **Hover:** `transform: translateY(-4px); border-color: #89D6DC; box-shadow: 0 8px 24px rgba(0,0,0,0.12); transition: all 0.3s cubic-bezier(0.4,0,0.2,1)`
+- **Shadow Strategy:** None at rest (flat-by-default); `hover-soft` shadow on interactive hover
+- **Internal Padding:** `1.5rem` standard; `0.875rem 1.25rem` for compact cards
+- **Hover:** `border-color: #89D6DC` plus the `hover-soft` shadow; no `translateY`, no top accent bar. `transition: border-color, box-shadow 0.3s ease-out`
 
 ### Inputs / Fields
 
@@ -257,15 +256,16 @@ Technical and warm: rounded-full silhouette (approachable), precise internal pad
 - **Scrolled state:** header gains `background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #d1d5db`
 - **Mobile:** slide-down menu (`animation: slide-down 0.25s cubic-bezier(0.4,0,0.2,1)`) with hamburger → X icon morph
 
-### Signature Component: Animated Workflow Node Board
+### Signature Component: Hero Illustration Panel
 
-The hero section's animated node board is the system's most expressive component: white rounded-xl cards representing pipeline steps (data sources, AI filters, output destinations) connected by animated SVG dashed paths. Nodes pulse with a teal or orange glow in staggered sequence (4s ease-in-out, 0.5s delay increment), simulating live data flow. This component communicates the consultant's domain (automation, cloud pipelines) without a single word. Treat it as the visual proof-of-craft standard the rest of the site is held to.
+The hero's right half is a white panel holding one raster illustration of an AI automation workflow (`/images/hero-ai-illustration.png`, 640x427, eager-loaded), placed over a faint teal dot grid masked to a soft ellipse. It communicates the consultant's domain (automation, pipelines) without words. The left half is white copy: three-line headline (middle line in teal-600), subtext, the single Ember CTA plus one outline secondary, and a proof line.
 
-- **Node card:** `background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08)`
-- **Teal node variant:** `border: 1.5px solid rgba(97,194,200,0.4)` → pulses to full `#61C2C8`
-- **Orange highlight node:** `border: 2px solid #f97316; box-shadow: 0 4px 16px rgba(249,115,22,0.15)`
-- **Connector paths:** SVG `stroke-dasharray: 8,6` in `#9ca3af` (static) or animated teal/orange (`stroke-dasharray: 12,200` running `dash-flow` 4s infinite)
-- **Reduced-motion fallback:** Remove all pulse, flow, and float animations; show static node positions with full opacity
+- **Panel:** `background: #ffffff`; visible from `md` up, hidden on mobile so the copy leads
+- **Backdrop:** `.hero-grid-pattern` teal dots at low opacity, no blur, no colored glow (the old `.hero-radial-glow` is removed)
+- **Illustration motion:** slow vertical float (`animate-float-warm`) only; no pulses, no flow animations
+- **Reduced-motion fallback:** remove the float; show the illustration static at full opacity
+- **Known gap:** the illustration uses saturated pink, orange and blue outside the teal + Ember palette. Replace with a teal/ink vector when the source file is available.
+- **Legacy:** the animated node board (pulsing pipeline nodes, dashed SVG connectors) is retired and its styles removed from `HeroWarmTealWash.razor.css`.
 
 ---
 
@@ -273,22 +273,25 @@ The hero section's animated node board is the system's most expressive component
 
 ### Do
 
-- **Do** use Action Orange (`#f97316`) exclusively for the single primary CTA per screen. Its scarcity is the point.
+- **Do** use Action Orange (`#F0642A`) exclusively for the single primary CTA per screen, via `.btn-cta`. Its scarcity is the point.
 - **Do** set body text to `#374151` (ink-body) or `#2F4E51` (teal-700) minimum — never lighter — to maintain ≥ 4.5:1 contrast on white.
 - **Do** cap display headings at `3.75rem`. Above that is shouting.
 - **Do** use `text-wrap: balance` on h1–h3 and `text-wrap: pretty` on prose blocks.
 - **Do** stagger animated elements in sequence (0.3s–0.5s increments) so motion reads as flow, not simultaneous burst.
 - **Do** wrap all animations in `@media (prefers-reduced-motion: reduce)` with a crossfade or instant-state fallback.
 - **Do** use the teal-cyan-aqua scale for all tinted UI surfaces, dark gradients, and dark sidebars — never legacy `cloudzen-steel` (`#2c194d`).
+- **Do** keep section backgrounds flat: white, `gray-50`, or a single teal-50 tint. No diagonal `bg-gradient-to-*` washes behind content.
 - **Do** use rounded-full silhouettes for all buttons to maintain the approachable-technical balance.
-- **Do** ensure interactive cards have a visible hover state (`translateY(-4px)` + border-color shift) with `transition: all 0.3s cubic-bezier(0.4,0,0.2,1)`.
+- **Do** ensure interactive cards have a visible hover state (border-color shift + `hover-soft` shadow, no vertical movement) with `transition: border-color, box-shadow 0.3s ease-out`.
 - **Do** keep line length at 65–72ch for reading-flow body sections.
 
 ### Don't
 
+- **Don't** add top accent bars (`scale-x` reveal), hover lifts (`translateY`) or glows to cards.
+- **Don't** add hover scale, shimmer sweeps, ping halos, or colored glows to buttons. The CTA answers with a color step and a 1px press.
 - **Don't** use orange for anything other than the primary CTA button. No orange headings, orange borders, orange backgrounds on content sections.
 - **Don't** use gradient text (`background-clip: text` + gradient). All heading text is a solid color.
-- **Don't** introduce a warm cream/beige body background (`#fcf9f5`, `#fdf8f5`, or any OKLCH L > 0.93, C > 0.01, hue 40–100). This is the WarmTealWash experiment pattern — it may exist in variant components but is not the site default surface.
+- **Don't** introduce a warm cream/beige body background (`#fcf9f5`, `#fdf8f5`, or any OKLCH L > 0.93, C > 0.01, hue 40–100). The hero is white; no variant keeps cream.
 - **Don't** add a third typeface. IBM Plex Sans + Helvetica Neue is the complete system. More than two feels like indecision.
 - **Don't** use all-caps for anything longer than 4 words or larger than `0.75rem` body text.
 - **Don't** add a colored left-border stripe (`border-left > 1px`) as a card or callout accent. Use background tint or full border instead.

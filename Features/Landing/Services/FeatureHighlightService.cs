@@ -10,7 +10,6 @@ public class FeatureHighlightService : IFeatureHighlightService
     public List<FeatureHighlight> GetAllFeatures() => new()
     {
         new FeatureHighlight(
-            Subtitle: "Reclaim Your Calendar",
             TitlePrefix: "Put the Busy Work on ",
             TitleBold: "Autopilot",
             TitleSuffix: "",
@@ -18,7 +17,6 @@ public class FeatureHighlightService : IFeatureHighlightService
             ImagePath: "/images/features/autopilot.webp"
         ),
         new FeatureHighlight(
-            Subtitle: "Built Around Your Workflow",
             TitlePrefix: "",
             TitleBold: "Custom Systems",
             TitleSuffix: " That Work the Way You Do",
@@ -26,7 +24,6 @@ public class FeatureHighlightService : IFeatureHighlightService
             ImagePath: "/images/features/custom-systems.webp"
         ),
         new FeatureHighlight(
-            Subtitle: "See What Matters at a Glance",
             TitlePrefix: "Clear, Simple ",
             TitleBold: "Insights",
             TitleSuffix: " From Your Data",
@@ -34,7 +31,6 @@ public class FeatureHighlightService : IFeatureHighlightService
             ImagePath: "/images/features/data-insights.webp"
         ),
         new FeatureHighlight(
-            Subtitle: "Out With the Old",
             TitlePrefix: "",
             TitleBold: "Modernize",
             TitleSuffix: " Your Systems, Keep Your Momentum",
@@ -42,7 +38,6 @@ public class FeatureHighlightService : IFeatureHighlightService
             ImagePath: "/images/features/modernize-systems.webp"
         ),
         new FeatureHighlight(
-            Subtitle: "Speed Wins Customers",
             TitlePrefix: "",
             TitleBold: "Faster Results",
             TitleSuffix: " Mean Happier Customers",

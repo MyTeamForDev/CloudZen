@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-04T21:11:38.000Z",
+  "generatedAt": "2026-11-20T14:30:00.000Z",
   "title": "Design System: CloudZen",
   "extensions": {
     "colorMeta": {
       "teal-brand":   { "role": "primary",   "displayName": "Aqua Signal",       "canonical": "#61C2C8", "tonalRamp": ["#DAF6F9","#B8EFF4","#89D6DC","#78BCC2","#659FA5","#61C2C8","#538488","#40676B","#2F4E51","#1F3638","#0F1E1F"] },
-      "cta-orange":   { "role": "secondary",  "displayName": "Action Orange",      "canonical": "#f97316", "tonalRamp": ["#fff7ed","#ffedd5","#fed7aa","#fb923c","#f97316","#ea580c","#c2410c"] },
+      "cta-orange":   { "role": "secondary",  "displayName": "Ember Orange",       "canonical": "#F0642A", "tonalRamp": ["#FFF3EC","#FFE3D2","#FFC7A6","#F9A47A","#F0642A","#E25A1F","#C24A15","#9A3A10"] },
       "teal-600":     { "role": "accent",     "displayName": "Deep Signal Teal",   "canonical": "#40676B" },
       "teal-700":     { "role": "ink-body",   "displayName": "Ink Teal",           "canonical": "#2F4E51" },
       "teal-800":     { "role": "ink-heading","displayName": "Heading Teal",       "canonical": "#1F3638" },
@@ -28,8 +28,8 @@
       { "name": "ambient-mid",     "value": "0 4px 16px rgba(0,0,0,0.10)",                            "purpose": "Modals, dropdowns, badges floating over content." },
       { "name": "hover-lift",      "value": "0 8px 24px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06)","purpose": "Interactive card hover state." },
       { "name": "glow-teal",       "value": "0 0 20px rgba(97,194,200,0.45), 0 0 40px rgba(97,194,200,0.2)","purpose": "Animated node pulse — never static elevation." },
-      { "name": "glow-orange",     "value": "0 0 20px rgba(249,115,22,0.45), 0 0 40px rgba(249,115,22,0.2)","purpose": "Animated orange-highlight node pulse." },
-      { "name": "cta-button",      "value": "0 4px 12px rgba(249,115,22,0.3)",                        "purpose": "CTA button hover shadow." }
+      { "name": "glow-orange",     "value": "0 0 20px rgba(240,100,42,0.45), 0 0 40px rgba(240,100,42,0.2)","purpose": "Animated orange-highlight node pulse." },
+      { "name": "cta-button",      "value": "0 1px 2px rgba(15,30,31,.14), 0 2px 6px -2px rgba(15,30,31,.18)", "purpose": "Flat ink-tinted shadow on the CTA." }
     ],
     "motion": [
       { "name": "ease-standard",    "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default easing for all state transitions." },
@@ -72,9 +72,9 @@
       "name": "Primary CTA Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Primary call-to-action. Orange, rounded-full. One per screen.",
+      "description": "Primary call-to-action (.btn-cta). Ember orange, deep teal ink, rounded-full. One per screen.",
       "html": "<button class=\"ds-btn-primary\">Book a Call</button>",
-      "css": ".ds-btn-primary { background: #f97316; color: #fff; padding: 0.75rem 1.75rem; border: none; border-radius: 9999px; font: 600 0.875rem 'IBM Plex Sans', sans-serif; letter-spacing: 0.01em; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; } .ds-btn-primary:hover { background: #ea6c0a; transform: translateY(-2px) scale(1.02); box-shadow: 0 4px 12px rgba(249,115,22,0.3); } .ds-btn-primary:focus-visible { outline: 2px solid #40676B; outline-offset: 3px; } @media (prefers-reduced-motion: reduce) { .ds-btn-primary { transition: background 0.2s ease; } .ds-btn-primary:hover { transform: none; } }"
+      "css": ".ds-btn-primary { background: #F0642A; color: #0F1E1F; padding: 0.75rem 1.75rem; border: none; border-radius: 9999px; font: 600 0.875rem 'IBM Plex Sans', sans-serif; letter-spacing: 0.01em; cursor: pointer; box-shadow: 0 1px 2px rgba(15,30,31,.14), 0 2px 6px -2px rgba(15,30,31,.18); transition: background-color 0.18s ease-out, box-shadow 0.18s ease-out, transform 0.12s ease-out; } .ds-btn-primary:hover { background: #E25A1F; } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 2px solid #0F1E1F; outline-offset: 3px; } @media (prefers-reduced-motion: reduce) { .ds-btn-primary { transition: none; } .ds-btn-primary:active { transform: none; } }"
     },
     {
       "name": "Secondary Button",

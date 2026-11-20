@@ -40,7 +40,6 @@
 }
 
 .timeline-card > div:hover {
-    transform: translateY(-3px);
     box-shadow: 0 12px 32px -8px rgba(97, 194, 200, 0.18);
     border-color: rgba(97, 194, 200, 0.3);
 }

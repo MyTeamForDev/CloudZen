@@ -550,9 +550,9 @@ Replaces decorative blur blobs. Reads as "engineering / systems" not "AI hero bl
 }
 ```
 
-Pair with toned-down `.hero-radial-glow` (opacity ≤ 0.12) behind subject.
+Do not pair it with a radial glow behind the subject (`.hero-radial-glow` removed 2026-11-20).
 
-> **Removed utilities:** `.animate-blob-drift`, `.hero-blob`, `.hero-blob-teal`, `.hero-blob-cyan` — all deleted 2026-06-28. Do not reintroduce.
+> **Removed utilities:** `.animate-blob-drift`, `.hero-blob`, `.hero-blob-teal`, `.hero-blob-cyan` — all deleted 2026-06-28; `.hero-radial-glow` deleted 2026-11-20. Do not reintroduce.
 
 ---
 
@@ -563,7 +563,7 @@ When passing colors to chart/counter components, use brand-aligned hex (not raw 
 | Role | Hex | Token |
 |------|-----|-------|
 | Primary metric / total | `#40676B` | `teal-cyan-aqua-600` |
-| Attention / needs action | `#fb923c` | `orange-400` |
+| Attention / needs action | `#F0642A` | `orange-400` |
 | Passive / resolved | `#9CA3AF` | `gray-400` |
 
 > **Anti-patterns:** app indigo `#6366f1`, raw success-green `#16a34a`, raw mid-gray `#6b7280`.

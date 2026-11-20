@@ -11,12 +11,12 @@
             <div class="greeting-text">
                 Hi there, have a question?<br />Text us here.
             </div>
-            <button class="greeting-close" @onclick="DismissGreeting" @onclick:stopPropagation="true">×</button>
+            <button class="greeting-close" aria-label="Dismiss greeting" @onclick="DismissGreeting" @onclick:stopPropagation="true">×</button>
         </div>
     }
 
     @* Floating toggle button *@
-    <button class="chatbot-fab @(isOpen ? "fab-active" : "")" @onclick="ToggleChat" title="Chat with CloudZen AI">
+    <button class="chatbot-fab @(isOpen ? "fab-active" : "")" @onclick="ToggleChat" title="Chat with CloudZen AI" aria-label="@(isOpen ? "Close chat" : "Open chat")">
         @if (isOpen)
         {
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
