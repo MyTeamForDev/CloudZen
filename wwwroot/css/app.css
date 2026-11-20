@@ -141,3 +141,20 @@ header.header-scrolled {
     }
 }
 
+
+/* ── Primary CTA — single source of truth ──
+   Ember orange, deep-teal ink (AA 5.3:1). Flat fill, tight neutral shadow,
+   no sheen / scale / colored glow. Press = 1px settle. */
+.btn-cta {
+    background-color: #F0642A;
+    color: #0F1E1F;
+    box-shadow: 0 1px 2px rgba(15, 30, 31, 0.14), 0 2px 6px -2px rgba(15, 30, 31, 0.18);
+    transition: background-color 0.18s ease-out, box-shadow 0.18s ease-out, transform 0.12s ease-out;
+}
+.btn-cta:hover {
+    background-color: #E25A1F;
+    box-shadow: 0 1px 2px rgba(15, 30, 31, 0.16), 0 6px 14px -6px rgba(15, 30, 31, 0.28);
+}
+.btn-cta:active { transform: translateY(1px); box-shadow: 0 1px 1px rgba(15, 30, 31, 0.2); }
+.btn-cta:focus-visible { outline: 2px solid #0F1E1F; outline-offset: 3px; box-shadow: 0 0 0 3px #fff; } /* white gap keeps the ring visible on dark sections */
+@media (prefers-reduced-motion: reduce) { .btn-cta { transition: none !important; } .btn-cta:active { transform: none; } }

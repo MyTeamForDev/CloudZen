@@ -34,7 +34,7 @@ public partial class BookingCalendar
         if (isSelected)
             return $"{baseClass} bg-teal-cyan-aqua-600 text-white font-bold";
         if (!isAvailable)
-            return $"{baseClass} text-gray-300 cursor-default";
+            return $"{baseClass} text-gray-400 cursor-default";
         if (isToday)
             return $"{baseClass} border-2 border-teal-cyan-aqua-600 text-teal-cyan-aqua-600 font-semibold hover:bg-teal-cyan-aqua-50 cursor-pointer";
 

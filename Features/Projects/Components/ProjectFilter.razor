@@ -22,7 +22,7 @@
     <div class="grid sm:grid-cols-2 gap-4">
         <!-- Status -->
         <div class="flex flex-col gap-1.5">
-            <label for="filter-status" class="text-[11px] font-semibold text-gray-600 uppercase tracking-[0.12em]">Status</label>
+            <label for="filter-status" class="text-xs font-semibold text-gray-600 uppercase tracking-[0.12em]">Status</label>
             <div class="relative">
                 <select id="filter-status"
                         @bind="SelectedStatus"
@@ -42,7 +42,7 @@
 
         <!-- Project Type -->
         <div class="flex flex-col gap-1.5">
-            <label for="filter-type" class="text-[11px] font-semibold text-gray-600 uppercase tracking-[0.12em]">Project type</label>
+            <label for="filter-type" class="text-xs font-semibold text-gray-600 uppercase tracking-[0.12em]">Project type</label>
             <div class="relative">
                 <select id="filter-type"
                         @bind="SelectedProjectType"
@@ -65,7 +65,7 @@
     @if (!string.IsNullOrEmpty(SelectedStatus) || !string.IsNullOrEmpty(SelectedProjectType))
     {
         <div class="mt-5 pt-5 border-t border-gray-100 flex flex-wrap items-center gap-2">
-            <span class="text-[11px] font-semibold text-gray-500 uppercase tracking-[0.12em] mr-1">Active</span>
+            <span class="text-xs font-semibold text-gray-500 uppercase tracking-[0.12em] mr-1">Active</span>
             @if (!string.IsNullOrEmpty(SelectedStatus))
             {
                 <span class="inline-flex items-center gap-1.5 pl-2.5 pr-1 py-1 bg-teal-cyan-aqua-50 text-teal-cyan-aqua-700 text-xs font-medium rounded-md border border-teal-cyan-aqua-100">
