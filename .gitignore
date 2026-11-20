@@ -378,3 +378,6 @@ MigrationBackup/
 .claude/hooks/notification-config.json
 .claude/hooks/smtp-cred-*.xml
 .claude/hooks/test.txt
+
+# NexSynapse IP-guard marker (local-only, auto-created)
+.nexsynapse-ip-guard
