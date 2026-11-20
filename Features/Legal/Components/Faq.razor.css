@@ -223,27 +223,6 @@
     min-height: 44px;
 }
 
-.faq-cta-button--primary {
-    background: #F0642A; /* orange-400 — brand primary */
-    color: #0F1E1F;      /* teal-cyan-aqua-900 — high contrast on orange */
-    box-shadow: 0 8px 20px -10px rgba(240, 100, 42, 0.45);
-}
-
-.faq-cta-button--primary:hover {
-    background: #F0642A; /* orange-500 */
-    box-shadow: 0 12px 28px -10px rgba(240, 100, 42, 0.55);
-}
-
-.faq-cta-button--primary:active {
-    transform: scale(0.97);
-    box-shadow: 0 4px 12px -8px rgba(240, 100, 42, 0.4);
-}
-
-.faq-cta-button--primary:focus-visible {
-    outline: 2px solid #61C2C8;
-    outline-offset: 2px;
-}
-
 .faq-cta-button--secondary {
     background-color: transparent;
     color: #475569;

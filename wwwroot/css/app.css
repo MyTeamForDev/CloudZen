@@ -157,4 +157,4 @@ header.header-scrolled {
 }
 .btn-cta:active { transform: translateY(1px); box-shadow: 0 1px 1px rgba(15, 30, 31, 0.2); }
 .btn-cta:focus-visible { outline: 2px solid #0F1E1F; outline-offset: 3px; box-shadow: 0 0 0 3px #fff; } /* white gap keeps the ring visible on dark sections */
-@media (prefers-reduced-motion: reduce) { .btn-cta { transition: none; } .btn-cta:active { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .btn-cta { transition: none !important; } .btn-cta:active { transform: none; } }
