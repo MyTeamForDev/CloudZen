@@ -381,3 +381,6 @@ MigrationBackup/
 
 # NexSynapse IP-guard marker (local-only, auto-created)
 .nexsynapse-ip-guard
+
+# Playwright MCP screenshots and logs
+.playwright-mcp/
