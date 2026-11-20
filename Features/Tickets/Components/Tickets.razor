@@ -25,18 +25,15 @@
     private int totalCount;
     private int openCount;
     private int closedCount;
-    private bool isLoading;
 
     protected override async Task OnInitializedAsync()
     {
-        isLoading = true;
         var tickets = await TicketService.GetAllTicketsAsync() ?? new List<TicketDto>();
         // totalCount = tickets.Count;
         totalCount = 30;
         // openCount = tickets.Count(t => t.IsOpen);
         openCount = 14;
         closedCount = totalCount - openCount;
-        isLoading = false;
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
