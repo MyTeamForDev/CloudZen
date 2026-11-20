@@ -1,6 +1,7 @@
 ﻿@inherits LayoutComponentBase
+<div class="flex min-h-screen flex-col">
 <Header />
-<div class="page mt-[4.5rem]">
+<div class="page mt-[4.5rem] flex-1">
     <main>
         <article class="content">
             @Body
@@ -8,5 +9,6 @@
     </main>
 </div>
 <Footer />
+</div>
 <ScrollToTopButton />
 <CloudZenChatbot />
