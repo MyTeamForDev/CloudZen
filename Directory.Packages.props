@@ -11,7 +11,7 @@
     <PackageVersion Include="Azure.Storage.Blobs" Version="12.24.0" />
     <PackageVersion Include="Azure.Storage.Files.Shares" Version="12.22.0" />
     <PackageVersion Include="Azure.Storage.Queues" Version="12.22.0" />
-    <PackageVersion Include="MailKit" Version="4.15.0" />
+    <PackageVersion Include="MailKit" Version="4.18.2" />
     <PackageVersion Include="Microsoft.ApplicationInsights.WorkerService" Version="2.23.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.17" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.17" />
@@ -24,7 +24,7 @@
     <PackageVersion Include="Microsoft.Extensions.Azure" Version="1.11.0" />
     <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
-    <PackageVersion Include="MimeKit" Version="4.15.1" />
+    <PackageVersion Include="MimeKit" Version="4.18.2" />
     <PackageVersion Include="Polly" Version="8.6.5" />
     <PackageVersion Include="Polly.RateLimiting" Version="8.6.5" />
     <PackageVersion Include="SendGrid" Version="9.29.3" />
