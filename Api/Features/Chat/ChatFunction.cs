@@ -46,7 +46,7 @@ public class ChatFunction(
 
     private const string AnthropicApiUrl = "https://api.anthropic.com/v1/messages";
     private const string AnthropicVersion = "2023-06-01";
-    private const string DefaultModel = "claude-sonnet-4-20250514";
+    private const string DefaultModel = "claude-sonnet-5-5";
     private const int MaxTokens = 200;
     private const int MaxRequestBodySize = 15000;
     private const int MaxMessages = 10;

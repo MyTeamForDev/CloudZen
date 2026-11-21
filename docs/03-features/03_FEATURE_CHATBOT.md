@@ -102,7 +102,7 @@ The chatbot uses Anthropic Claude as the AI backend. All API communication is pr
 |              ANTHROPIC API (External)                            |
 |                                                                  |
 |  Endpoint: https://api.anthropic.com/v1/messages                |
-|  Model:    claude-sonnet-4-20250514                               |
+|  Model:    claude-sonnet-5-5                               |
 |  Version:  2023-06-01                                           |
 |                                                                  |
 |  Receives: system prompt + trimmed conversation history         |
@@ -204,7 +204,7 @@ ChatFunction.cs (Azure Function):
   +-- Trims conversation to last 6 messages
   +-- Ensures first message is role "user"
   +-- Injects system prompt + knowledge base
-  +-- Calls Anthropic API (claude-sonnet-4-20250514, max 200 tokens)
+  +-- Calls Anthropic API (claude-sonnet-5-5, max 200 tokens)
   +-- Parses response, extracts text
   +-- Truncates to <=500 characters at sentence boundary
   +-- Returns ChatResponse { Success, Reply }
@@ -259,7 +259,7 @@ CloudZenChatbot.razor:
 | **Auth Level** | Anonymous (rate-limited instead) |
 | **Runtime** | .NET 8 isolated worker |
 | **External API** | Anthropic Claude (`https://api.anthropic.com/v1/messages`) |
-| **Model** | `claude-sonnet-4-20250514` |
+| **Model** | `claude-sonnet-5-5` |
 
 ### Proxy Architecture
 
@@ -309,7 +309,7 @@ Blazor WASM (no secrets) -> Azure Function (holds API key) -> Anthropic Claude A
 
 | Setting | Value | Rationale |
 |---|---|---|
-| **Model** | `claude-sonnet-4-20250514` | Best balance of quality, speed, and cost |
+| **Model** | `claude-sonnet-5-5` | Best balance of quality, speed, and cost |
 | **Max Tokens** | `200` | ~800 chars max; naturally constrains output length |
 | **Anthropic Version** | `2023-06-01` | Stable API version |
 
@@ -409,7 +409,7 @@ The knowledge base is a comprehensive `const string` stored server-side in `Chat
 |---|---|---|
 | `AnthropicApiUrl` | `https://api.anthropic.com/v1/messages` | Anthropic Messages API endpoint |
 | `AnthropicVersion` | `2023-06-01` | API version header |
-| `DefaultModel` | `claude-sonnet-4-20250514` | Claude model identifier |
+| `DefaultModel` | `claude-sonnet-5-5` | Claude model identifier |
 | `MaxTokens` | `200` | Max tokens per AI response |
 | `MaxRequestBodySize` | `15,000` | Max request body in bytes |
 | `MaxMessages` | `10` | Max messages per request |

@@ -174,7 +174,7 @@ public async Task<IActionResult> Run(
     var apiKey = _configuration["ANTHROPIC_API_KEY"];
 
     // Forward to Anthropic API (https://api.anthropic.com/v1/messages)
-    //   Model: claude-sonnet-4-20250514
+    //   Model: claude-sonnet-5-5
     //   Max tokens: 200
     //   Last 6 messages sent as conversation history
     //   System prompt with CloudZen knowledge base embedded

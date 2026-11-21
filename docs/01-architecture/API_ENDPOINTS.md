@@ -134,7 +134,7 @@ All endpoints also accept `OPTIONS` for CORS preflight (returns `204`).
 
 | Setting | Value |
 |---------|-------|
-| Model | `claude-sonnet-4-20250514` |
+| Model | `claude-sonnet-5-5` |
 | API version | `2023-06-01` |
 | Max tokens | 200 per response |
 | Reply hard limit | 500 characters |
