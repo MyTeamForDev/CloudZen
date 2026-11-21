@@ -501,7 +501,7 @@ public class ChatFunction(
 
         var anthropicRequest = new
         {
-            model = DefaultModel,
+            model = _config["ANTHROPIC_MODEL"] is { Length: > 0 } configuredModel ? configuredModel : DefaultModel,
             max_tokens = MaxTokens,
             system = SystemPrompt,
             messages = recentMessages

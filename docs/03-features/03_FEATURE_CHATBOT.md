@@ -409,7 +409,7 @@ The knowledge base is a comprehensive `const string` stored server-side in `Chat
 |---|---|---|
 | `AnthropicApiUrl` | `https://api.anthropic.com/v1/messages` | Anthropic Messages API endpoint |
 | `AnthropicVersion` | `2023-06-01` | API version header |
-| `DefaultModel` | `claude-sonnet-5-5` | Claude model identifier |
+| `DefaultModel` | `claude-sonnet-5-5` | Fallback model; override with app setting `ANTHROPIC_MODEL` (no redeploy needed) |
 | `MaxTokens` | `200` | Max tokens per AI response |
 | `MaxRequestBodySize` | `15,000` | Max request body in bytes |
 | `MaxMessages` | `10` | Max messages per request |
