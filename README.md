@@ -53,7 +53,7 @@ A modern Blazor WebAssembly portfolio and consulting showcase built with .NET 8,
 - [x] **Azure Application Insights** - Real-time monitoring and telemetry with adaptive sampling
 
 ### External APIs
-- [x] **Anthropic Claude API** (`claude-sonnet-4-20250514`) - AI chatbot backend with server-side knowledge base and system prompt
+- [x] **Anthropic Claude API** (`claude-sonnet-5-5`) - AI chatbot backend with server-side knowledge base and system prompt
 
 ### Backend Services & APIs
 - [x] **Brevo SMTP Relay** - Transactional email delivery via MailKit/MimeKit through Azure Functions API
