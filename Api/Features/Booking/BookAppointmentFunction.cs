@@ -187,6 +187,19 @@ public class BookAppointmentFunction(
                 };
             }
 
+            // n8n answered 2xx but with no body: the workflow has no "Respond to Webhook" node
+            // (or the webhook is set to "Respond Immediately"), so there is no bookingId to return.
+            if (string.IsNullOrWhiteSpace(n8nBody))
+            {
+                _logger.LogError(
+                    "n8n returned {StatusCode} with an empty body for action {Action}. Check the workflow's Respond to Webhook node.",
+                    n8nResponse.StatusCode, bookingRequest.Action);
+                return new ObjectResult(new { success = false, message = "We couldn't confirm your booking right now. Please try again." })
+                {
+                    StatusCode = StatusCodes.Status502BadGateway
+                };
+            }
+
             // Pass the n8n JSON response through to the frontend as-is
             // (it already contains { success, bookingId, message } or { success: false, message })
             return new ContentResult
